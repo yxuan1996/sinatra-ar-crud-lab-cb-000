@@ -31,6 +31,8 @@ class ApplicationController < Sinatra::Base
     erb :edit
   end
 
+
+
   post '/posts/:id' do  #updates a post
     @post = Post.find_by_id(params[:id])
     @post.name = params[:name]
